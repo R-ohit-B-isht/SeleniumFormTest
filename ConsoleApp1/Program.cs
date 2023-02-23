@@ -53,6 +53,14 @@ namespace ConsoleApp1
 			seleniumTest.Click(driver, "male", "Id");
 			SeleniumGetTest.RadioBoxTest(driver, "Id", "Gender");
 
+			//mobile number
+			seleniumTest.EnterText(driver, "mobile", "9027652516", "Id");
+			SeleniumGetTest.TestText(driver, "mobile", "Id", "Moblie Number");
+
+			//email
+			seleniumTest.EnterText(driver, "email", "rbtunes02@gmail.com", "Id");
+			SeleniumGetTest.TestText(driver, "email", "Id", "Email Address");
+
 			//state
 			//seleniumTest.DropDown(driver, "state", "India", "Id");
 			SeleniumGetTest.DropDownTest(driver, "state", "Id", "State");
