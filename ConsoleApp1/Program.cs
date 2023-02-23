@@ -62,7 +62,7 @@ namespace ConsoleApp1
 			SeleniumGetTest.TestText(driver, "email", "Id", "Email Address");
 
 			//state
-			//seleniumTest.DropDown(driver, "state", "India", "Id");
+			seleniumTest.DropDown(driver, "state", "India", "Id");
 			SeleniumGetTest.DropDownTest(driver, "state", "Id", "State");
 
 		}

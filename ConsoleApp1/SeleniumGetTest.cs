@@ -34,6 +34,19 @@ namespace ConsoleApp1
                 testPassed = false;
             
             Console.WriteLine($"Non-empty {testField} field test result: {(testPassed ? "PASS" : "FAIL")}");
+
+            if (element == "mobile" && testPassed) 
+            {
+                Console.WriteLine($"{testField} field Validity test result: {(IsValidMobileNumber(textfieldvalue) ? "PASS" : "FAIL")}");
+            }
+            else if (element == "email" && testPassed)
+            {
+                Console.WriteLine($"{testField} field Validity test result: {(IsValidEmail(textfieldvalue) ? "PASS" : "FAIL")}");
+            }
+            else if (element == "dob" && testPassed)
+            {
+                Console.WriteLine($"{testField} field Validity test result: {(ValidateDOB(textfieldvalue) ? "PASS" : "FAIL")}");
+            }
         }
         public static void DropDownTest(IWebDriver driver, string element, string elementType, string testField)
         {
