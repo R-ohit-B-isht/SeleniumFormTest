@@ -41,17 +41,21 @@ namespace ConsoleApp1
 		{
 			//first name
 			seleniumTest.EnterText(driver, "fname", "Rohit", "Id");
-
+			SeleniumGetTest.TestText(driver, "fname", "Id","First Name");
 			//Last name
 			seleniumTest.EnterText(driver, "lname", "Bisht", "Id");
-
+			SeleniumGetTest.TestText(driver, "lname",  "Id","Last Name");
+			//DOB
+			seleniumTest.EnterText(driver, "dob", "1997-11-02", "Id");
+			SeleniumGetTest.TestText(driver, "dob", "Id","D-O-B");
 
 			//gender
 			seleniumTest.Click(driver, "male", "Id");
+			SeleniumGetTest.RadioBoxTest(driver, "Id", "Gender");
 
 			//state
-			seleniumTest.DropDown(driver, "state", "India", "Id");
-
+			//seleniumTest.DropDown(driver, "state", "India", "Id");
+			SeleniumGetTest.DropDownTest(driver, "state", "Id", "State");
 
 		}
 		[Test]
