@@ -67,6 +67,34 @@ namespace ConsoleApp1
 
 		}
 		[Test]
+		public void SelectorTest() 
+		{
+
+
+			string[] selectors = { "input[name='First Name']", "textarea[name='About']", "select[name='State']" };
+			string[] values = { "Rohit", "Sunny", "India" };
+			int i = 0;
+			foreach (string selector in selectors)
+			{
+				IWebElement element = driver.FindElement(By.CssSelector(selector));
+
+				element.SendKeys(values[i]);
+				
+
+				string actualValue = element.GetAttribute("value");
+				if (actualValue == values[i])
+				{
+					Console.WriteLine("Test passed for element with selector: " + selector);
+				}
+				else
+				{
+					Console.WriteLine("Test failed for element with selector: " + selector);
+				}
+				i++;
+			}
+		}
+
+		[Test]
 		public void FirstNameTest()
 		{
 			//put a vlaue in First Name
