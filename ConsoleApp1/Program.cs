@@ -35,7 +35,7 @@ namespace ConsoleApp1
 		{
 			//driver.Close();
 		}
-
+		//html id/name dependent test cases
 		[Test]
 		public void FillForm()
 		{
@@ -66,6 +66,7 @@ namespace ConsoleApp1
 			SeleniumGetTest.DropDownTest(driver, "state", "Id", "State");
 
 		}
+		//html id/name independent test cases
 		[Test]
 		public void SelectorTest() 
 		{
