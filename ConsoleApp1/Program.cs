@@ -98,13 +98,12 @@ namespace ConsoleApp1
 		[Test]
 		public void FirstNameTest()
 		{
-			//put a vlaue in First Name
-			seleniumTest.EnterText(driver, "fname", "Rohit", "Id");
-
 			IWebElement firstNameField = driver.FindElement(By.CssSelector("label[for='fname'] + input[type='text']"));
 
 			// Define the expected value for the field
 			string expectedValue = "Rohit";
+
+			firstNameField.SendKeys(expectedValue);
 
 			// Retrieve the actual value of the field
 			string actualValue = firstNameField.GetAttribute("value");
@@ -120,13 +119,14 @@ namespace ConsoleApp1
 		public void LastNameTest()
 		{
 
-			seleniumTest.EnterText(driver, "lname", "Bisht", "Id");
 			// Find the "First Name" field using a selector based on the label text
 			IWebElement lastNameLabel = driver.FindElement(By.XPath("//label[text()='Last Name']"));
 			IWebElement lastNameField = lastNameLabel.FindElement(By.XPath("./following-sibling::input"));
 
 			// Define the expected value for the field
 			string expectedValue = "Bisht";
+
+			lastNameField.SendKeys(expectedValue);
 
 			// Retrieve the actual value of the field
 			string actualValue = lastNameField.GetAttribute("value");
